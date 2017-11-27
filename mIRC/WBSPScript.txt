@@ -1,0 +1,422 @@
+;------------------mIRC Welcome Back Script by SP----v1.11------------------
+;
+; This is a welcome back script that allows storing quotes or messages in a 
+; local database per channel per user. All the files and folders should be 
+; placed in the "scripts/wb/" folder in the mIRC installation directory.
+; You will probably need to create the initial /wb/ folder.
+;
+; Make sure the correct folders and write privleges on the computer exist! 
+;
+; If you keep a portable installation of mIRC in a dropbox folder, you could
+; also add a link to the master database as the first entry in the complete
+; database: WB.txt. This allows users to see the complete list whenever when
+; using the trigger "!wb 1"
+;
+; Example of a WB.txt with a DB link as the first entry:
+; https://www.dropbox.com/s/75x1qpsyeibu2dy/WB.txt
+;
+; Any questions and suggestions can be sent to sbbsbtsp@gmail.com
+; No promises on replies.
+;
+; Latest version of this file can be found at 
+; https://www.dropbox.com/s/ohflsczvrpw5ylr/WBSPScript.txt
+;
+;
+; CHANGE LOG ----------------------------------------------------------------
+;
+; v1.12
+; - Fixed bug where you could link with wb.txt thus adding only to master
+;
+; v1.11
+; - Fixed bug where !wb <#> wasn't working
+;
+; v1.10
+; - Add linking support for nicknames such that when !wb <alt-name> happens
+;   it'll call !wb <name>
+;
+; v1.04
+; - Fixed bug where !wb # didn't prompt latest message
+; - Added feature such that removewb <#> will echo the line being deleted
+;
+; v1.03
+; - Fixed bug where /readwb didn't auto pick if no other parameters
+;
+; v1.02
+; - Added "!rem <nick> #" to remove latest entry
+; - Fixed bug with remove where it would not remove from complete database
+; - Fixed issues with empty greeting
+;
+; v1.01
+; - Fixed whitelist issues
+;
+; DESIRED FEATURES -----------------------------------------------------------
+;
+; - Global databases not channel specific
+;
+;-----------------------------------------------------------------------------
+
+
+;------------------------------------ALIAS------------------------------------
+
+;-----------------------------------------------------------------------------
+;
+; Usage #1:   /add whitelist <nick>
+; Result:   Allows <nick> to also add and remove WB's from the database
+; Example:    /add whitelist SP
+; Output:     You added SP to whitelist.txt
+;
+; Usage #2:   /add link <alt-nick> <nick>
+; Result:   Allows <alt-nick> to also trigger WB's from the database
+; Example:    /add link SP-work SP
+; Output:     You added "SP-work SP" to link.txt
+;
+; Usage #3:   /add <nick> <quote>
+; Result:     Adds a new quote to <nick>.txt as well as the master WB.txt file
+; Note:       Calls removewb in order to prevent duplicates
+; Example:    /add SP <SP> Hello World!
+; Output:     You added "<SP> Hello World!" to SP.txt
+;
+;-----------------------------------------------------------------------------
+/add {
+  var %string = I broked
+  if ($1 iswm whitelist) {
+    write "scripts/wb/ $+ $chan $+ / $+ $1 $+ .txt" $2 $+ $chr(32) $+ true
+    %string = 7Added " $+ $2 $+ " to $1.txt
+  }
+   elseif ($1 iswm link) {
+    var %spacepos = $pos($2, $chr(32))
+    var %newAlt = $left($2, %spacepos - 1)
+    var %regular = $right($2, %spacepos + 1)
+    var %altname = $linkcheck(%newAlt)
+    if (%altname == 0) {
+      if (%regular isin " wb ") {
+        %string = You cannot link to the master file?
+      }
+      else {
+        write "scripts/wb/ $+ $chan $+ / $+ $1 $+ .txt" $2- 
+        %string = 7Added " $+ $2- $+ " to $1.txt
+      }
+    }
+    else {
+      %string = Nick " $+ %newAlt $+ " is already linked with %altname
+    }
+  }
+  else {
+    var %name = $linkcheck($1)
+    if (%name == 0) {
+      %name = $1
+    }
+    removewb %name $2-
+    write "scripts/wb/ $+ $chan $+ / $+ %name $+ .txt" $2-
+    write "scripts/wb/ $+ $chan $+ /WB.txt" $2-
+    %string = 7Added " $+ $2- $+ " to %name $+ .txt
+  }
+  echo -ga %string
+  return %string 
+}
+
+;-----------------------------------------------------------------------------
+;
+; Usage:    /whitelist <nick>
+; Result:   Returns true or false depending if the user is on the list
+; Example:  /whitelist SP
+; Output:   N/A
+;
+;-----------------------------------------------------------------------------
+/whitelist {
+  var %file = scripts/wb/ $+ $chan $+ /whitelist.txt
+  if ($isfile(%file)) {
+    var %name = $linkcheck($1)
+    if (%name == 0) {
+      %name = $1
+    }
+    if ($read(%file, ns, %name) iswm true) {
+      return 1
+    }
+    else {
+      return 0
+    }
+  }
+}
+
+;-----------------------------------------------------------------------------
+;
+; Usage:    /linkcheck <nick>
+; Result:   Returns true or false depending if the user is on the list
+; Example:  /linkcheck SP-work
+; Output:   N/A
+;
+;-----------------------------------------------------------------------------
+/linkcheck {
+  var %file = scripts/wb/ $+ $chan $+ /link.txt
+  if ($isfile(%file)) {
+    var %string = $read(%file, ns, $1)
+    if ($len(%string) > 0) {
+      return %string
+    }
+  }
+  return 0
+}
+
+
+;-----------------------------------------------------------------------------
+;
+; Usage #1:   /removewb <nick> <line number>
+; Result:     Removes <line number> line from <nick>.txt as well as the master
+;                  database: WB.txt
+; Example:    /removewb SP 1
+; Output:     Removed number 1 line from SP.txt
+;
+; Usage #2:    /removewb <nick> <message>
+; Result:      Removes <message> from <nick>.txt as well as the complete 
+;                   database: WB.txt
+; Example      /removewb SP <SP> Hello World!
+; Output:      Removed "<SP> Hello World!" from SP.txt
+;
+; Usage #3:    /removewb <nick> #
+; Result:      Removes the latest entry from <nick>.txt as well as the master
+;                   database: WB.txt
+; Example:     /removewb SP #
+; Output:      Removed latest entry from SP.txt
+;
+;-----------------------------------------------------------------------------
+/removewb {
+  var %name = $linkcheck($1)
+  if (%name == 0) {
+    %name = $1
+  }
+  var %file = scripts/wb/ $+ $chan $+ / $+ %name $+ .txt
+  var %numLines = $lines(%file)
+  var %string = Removed " $+ $2- $+ " from %name $+ .txt
+  set %entry $read(%file, n, %numLines)
+  if ($isfile(%file)) {
+    if ($2 isnum) {
+      write -dl $+ $2 %file
+      set %entry = $read(%file, n, $2)
+      %string = Removed number $2 line, " $+ %entry $+ " from %name $+ .txt
+    }
+    elseif ($2 == $chr(35)) {
+      write -dw $+ " $+ %entry $+ " %file
+      %string = Removed latest entry " $+ %entry $+ " from %name $+ .txt
+    }
+    else {
+      write -dw $+ " $+ $2- $+ " %file
+    }
+  }
+  %file = scripts/wb/ $+ $chan $+ /wb.txt
+  if ($isfile(%file)) {
+    if ($2 isnum || $2 == $chr(35)) {
+      write -dw $+ " $+ %entry $+ " %file
+    }
+    else {
+      write -dw $+ " $+ $2- $+ " %file
+    }
+  }
+  echo -ga 4 $+ %string
+  return %string
+}
+
+
+;-----------------------------------------------------------------------------
+;
+; Usage #1:    /readwb 
+; Result:      Reads a random line from the complete database: WB.txt
+; Example:     /readwb
+; Output:      [5/34]<SP> Hello World!
+;
+; Usage #2:    /readwb #
+; Result:      Reads the latest line added to the complete database: WB.txt
+; Example:     /readwb #
+; Output:      [34/34]<Someone> This is my last test
+;
+; Usage #3:    /readwb # <string>
+; Result:      Specifies how many lines contain <string> string
+; Example:     /readwb # dogs
+; Output:      There are a total of 3 lines containing "dogs".
+;
+; Usage #4:    /readwb <#>
+; Result:      Reads the <#> line added to the complete database: WB.txt
+; Example:     /readwb 7
+; Output:      [7/34]<NewGuy> What should I say here?
+;
+; Usage #5:    /readwb <nick>
+; Result:      Reads a random line from <nick>.txt
+; Example:     /readwb SP
+; Output:      [3/6]<SP> Blarghhhhhhhhhh
+;
+; Usage #6:    /readwb <nick> #
+; Result:      Reads the latest line added to <nick>.txt
+; Example:     /readwb SP #
+; Output:      [6/6]<SP> Running out of things to say
+;
+; Usage #7:    /readwb <nick> # <string>
+; Result:      Specifies how many lines contain <string> string in <nick>.txt
+; Example:     /readwb SP # dogs
+; Output:      SP has 2 lines containing "dogs".
+;
+; Usage #8:    /readwb <nick> <#>
+; Result:      Reads the <#> line added to <nick>.txt
+; Example:     /readwb SP 7
+; Output:      SP hasn't said that many stupid things yet.
+;-----------------------------------------------------------------------------
+/readwb {
+  var %name = 0
+  if ($1 isnum ) {
+  }
+  else {
+    %name = $linkcheck($1)
+    if (%name == 0) {
+      %name = $1
+    } 
+  }
+  if (%name && %name != $chr(35) && %name != 0) {
+    var %file = scripts/wb/ $+ $chan $+ / $+ %name $+ .txt
+    if ($isfile(%file)) {      
+      var %numLines = $lines(%file)
+      var %num = $r(1, %numLines)
+      if (%num > 0 && %numLines > 0) {
+        if ($2 == $chr(35)) {
+          if ($3) {
+            var %i = 0
+            while ($read(%file, nw, * $+ $3- $+ *, $calc($readn + 1))) {
+              inc %i
+            } 
+            msg $chan $1 has %i lines containing " $+ $3- $+ ".
+          }
+          else {
+            msg $chan $([,) $+ %numLines $+ / $+ %numLines $+ $(],) $read(%file, n, %numLines)
+          }
+        }
+        elseif ($2 <= %numLines && $2 > 0) {
+          msg $chan $([,) $+ $2 $+ / $+ %numLines $+ $(],) $read(%file, n, $2)
+        }
+        elseif ($2 > %numLines) {
+          msg $chan $1 hasn't said that many stupid things yet.
+        }
+        else {
+          msg $chan $([,) $+ %num $+ / $+ %numLines $+ $(],) $read(%file, n, %num)   
+        }   
+      }
+    }    
+  }
+  else {
+    var %file = scripts/wb/ $+ $chan $+ /wb.txt
+    var %numLines = $lines(%file)
+    var %num = $r(1, %numLines)
+    if ($1 == $chr(35)) {
+      if ($2) {
+        var %i = 0
+        while ($read(%file, nw, * $+ $2- $+ *, $calc($readn + 1))) {
+          inc %i
+        } 
+        msg $chan There are a total of %i lines containing " $+ $2- $+ ".
+      }
+      else {
+        msg $chan $([,) $+ %numLines $+ / $+ %numLines $+ $(],) $read(%file, n, %numLines)
+      }
+    }
+    elseif ($1 isnum) {
+      if ($1 <= %numlines && $1 > 0) {
+        msg $chan $([,) $+ $1 $+ / $+ %numLines $+ $(],) $read(%file, n, $1)
+      }
+      elseif ($1 > %numLines) {
+        msg $chan Not enough stupid things have been said yet.
+      }
+    }
+    else {
+      msg $chan $([,) $+ %num $+ / $+ %numLines $+ $(],) $read(%file, n, %num)
+    }
+  }
+}
+
+
+;---------------------------------END ALIAS------------------------------------
+
+
+
+
+
+;-----------------------------------REMOTE-------------------------------------
+
+
+;-----------------------------------------------------------------------------
+;
+; Reads a line when anyone starts a trigger with "!wb"
+;
+; !wb                - reads a random line from the complete database: WB.txt
+; !wb #              - reads the latest line from the complete database: WB.txt
+; !wb <#>            - reads <#> line from the complete database: WB.txt
+; !wb # <str>        - counts how many lines contain <str> in WB.txt
+; !wb <nick>         - reads a random line from <nick>.txt
+; !wb <nick> #       - reads the latest line from <nick>.txt
+; !wb <nick> <#>     - reads <#> line from <nick>.txt
+; !wb <nick> # <str> - counts how many lines contain <str> in <nick.txt> 
+;
+;-----------------------------------------------------------------------------
+on ^*:TEXT:!wb*:#: {
+  if ($2 == help) {
+    msg $chan "!wb <name>" reads someone's random WB message 
+    msg $chan "!wb <name> <#>" reads a specific WB message
+    ;msg $chan "!wb <name> $chr(35) <string>" to find how many messages a person has
+    msg $chan "!add <name> <message>" will add a message (requires special privleges)
+    msg $chan "!rem <name> <message>" removes a message (requires special privleges)
+  }
+  elseif ($3 == $chr(35)) {
+    readwb $2 $chr(35) $4
+  }
+  elseif ($3) {
+    readwb $2 $3
+  }
+  elseif ($2) {
+    readwb $2
+  }
+  else {
+    readwb
+  }
+}
+
+;-----------------------------------------------------------------------------
+;
+; Removes a line when an op, hop, or user in the whitelist uses "!rem"
+;
+; !rem <nick> <#>        - removes <#> line from <nick>.txt and WB.txt
+; !rem <nick> <message>  - removes <message> from <nick>.txt and WB.txt
+;
+;-----------------------------------------------------------------------------
+on ^*:TEXT:!rem*:#: {
+  if ($nick isop $chan || $nick ishop $chan || $whitelist($nick))  {
+    msg $chan 7 $removewb($2, $3-)
+  }
+}
+
+;-----------------------------------------------------------------------------
+;
+; Adds a line when an op, hop, or user in the whitelist uses "!add"
+;
+; !add <nick> <message>  - adds <message> to <nick>.txt and WB.txt
+;-----------------------------------------------------------------------------
+on ^*:TEXT:!add*:#: {
+  if ($nick isop $chan || $nick ishop $chan || $whitelist($nick)) {
+    var %string = $add( $2, $3-)
+    msg $chan 7$ %string
+  }
+}
+
+;-----------------------------------------------------------------------------
+;
+; Auto-greet anyone who joins <channelname>. Reads a line if they are a regular
+; or uses a standard greeting for unknown users.
+;
+; REPLACE <channelname> BEFORE USING 
+;
+;-----------------------------------------------------------------------------
+on *:JOIN:#<channelname>: {
+  var %file = scripts/wb/ $+ $chan $+ / $+ $nick $+ .txt
+  if ($isfile(%file)) {
+    readwb $nick
+  }
+  else {
+    msg $chan o/ Hi, $nick $+ . Welcome to #<channelname>!
+  }
+}
+;---------------------------------END REMOTE----------------------------------

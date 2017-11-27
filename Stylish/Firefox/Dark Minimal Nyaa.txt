@@ -1,0 +1,251 @@
+@-moz-document url-prefix("https://nyaa.si/") {
+.alert {
+        display: none;
+}
+        
+.container {
+        width: 90%;
+        padding-right:0px;
+        padding-left:0px;
+}
+        
+.table > tbody > tr.success > td, 
+.table > tbody > tr.success > th, 
+.table > tbody > tr > td.success, 
+.table > tbody > tr > th.success, 
+.table > tfoot > tr.success > td, 
+.table > tfoot > tr.success > th, 
+.table > tfoot > tr > td.success, 
+.table > tfoot > tr > th.success, 
+.table > thead > tr.success > td, 
+.table > thead > tr.success > th, 
+.table > thead > tr > td.success, 
+.table > thead > tr > th.success {
+        background-color: rgba(30, 80, 20, .5);
+        color: rgba(204,204,204,.5);
+}
+        
+.table-hover>tbody>tr.success:hover>td,
+.table-hover>tbody>tr.success:hover>th,
+.table-hover>tbody>tr:hover>.success,
+.table-hover>tbody>tr>td.success:hover,
+.table-hover>tbody>tr>th.success:hover {
+        color:#646464;
+}
+
+.table > tbody > tr.danger > td, 
+.table > tbody > tr.danger > th, 
+.table > tbody > tr > td.danger, 
+.table > tbody > tr > th.danger, 
+.table > tfoot > tr.danger > td, 
+.table > tfoot > tr.danger > th, 
+.table > tfoot > tr > td.danger, 
+.table > tfoot > tr > th.danger, 
+.table > thead > tr.danger > td, 
+.table > thead > tr.danger > th, 
+.table > thead > tr > td.danger, 
+.table > thead > tr > th.danger {
+    background-color: rgba(80, 30, 20, .5);
+    color: rgba(204,204,204,.5);
+}
+
+.table-hover>tbody>tr.danger:hover>td,
+.table-hover>tbody>tr.danger:hover>th,
+.table-hover>tbody>tr:hover>.danger,
+.table-hover>tbody>tr>td.danger:hover,
+.table-hover>tbody>tr>th.danger:hover {
+        color:#646464;
+}   
+
+body {
+        font-weight: bold;
+        font-family:"calibri";
+        background-color: #101010;
+}
+
+td {
+        font-size: 0.9em; 
+}
+        
+td:nth-child(1) {
+        text-align: center;
+}
+        
+a[title="Anime - Non-English-translated"]:before{
+        content: "Non-English"!important;
+        color: #6EC76A;
+}   
+   
+img[alt="Anime - Non-English-translated"]{
+        display: none!important;
+}
+    
+a[title="Anime - English-translated"]:before{
+        content: "English"!important;
+        color: #BE8EE3;
+}   
+   
+img[alt="Anime - English-translated"]{
+        display: none!important;
+}
+a[title="Audio - Lossy"]:before{
+        content: "Lossy Audio"!important;
+        color: #E35A61;
+}   
+   
+img[alt="Audio - Lossy"]{
+        display: none!important;
+}
+a[title="Audio - Lossless"]:before{
+        content: "Lossless Audio"!important;
+        color: #E3DE93;
+}   
+   
+img[alt="Audio - Lossless"]{
+        display: none!important;
+}
+a[title="Anime - Raw"]:before{
+        content: "Raw Anime"!important;
+        color: #999;
+}   
+   
+img[alt="Anime - Raw"]{
+        display: none!important;
+}
+a[title="Live Action - Raw"]:before{
+        content: "Raw Live Action"!important;
+        color: #E35A61;
+}   
+   
+img[alt="Live Action - Raw"]{
+        display: none!important;
+}
+a[title="Books - Raw"]:before{
+        content: "Raw Books"!important;
+        color: #96C78E;
+}
+    
+img[alt="Books - Raw"]{
+        display: none!important;       
+}
+        
+a[title="Literature - Raw"]:before{
+        content: "Raw Literature"!important;
+        color: #22B087;
+}
+        
+img[alt="Literature - Raw"]{
+        display: none!important;       
+}
+        
+a[title="Literature - English-translated"]:before{
+        content: "English Lit"!important;
+        color: #CCC;
+}
+        
+img[alt="Literature - English-translated"]{
+        display: none!important;       
+}
+        
+a[title="Literature - Non-English-translated"]:before{
+        content: "Non-English Lit"!important;
+        color: #C46A31;
+}
+        
+img[alt="Literature - Non-English-translated"]{
+        display: none!important;       
+}
+
+a[title="Books - English-scanlated Books"]:before{
+        content: "Eng Books"!important;
+        color: #73E3C0;
+}   
+   
+img[alt="Books - English-scanlated Books"]{
+        display: none!important;
+}
+        
+a[title="Books - Non-English-scanlated Books"]:before{
+       content: "Non-Eng Books"!important;
+       color: #E3AB7F;
+}   
+   
+img[alt="Books - Non-English-scanlated Books"]{
+        display: none!important;
+}
+        
+a[title="Anime - Anime Music Video"]:before{
+        content: "AMV"!important;
+        color: #BE8EE3;
+} 
+        
+img[alt="Anime - Anime Music Video"]{
+        display: none!important;
+}  
+        
+a[title="Live Action - English-translated"]:before{
+        content: "Eng Live Action"!important;
+        color: #E3DE93;
+}
+        
+img[alt="Live Action - English-translated"]{
+        display: none!important;
+}  
+        
+a[title="Live Action - Non-English-translated"]:before{
+        content: "Non-Eng Live Action"!important;
+        font-size: 0.9em;
+        color: #73C3E3;
+}
+        
+img[alt="Live Action - Non-English-translated"]{
+        display: none!important;
+}  
+        
+a[title="Software - Games"]:before{
+        content: "Games"!important;
+        color: #6EC5E3;
+}
+        
+img[alt="Software - Games"]{
+        display: none!important;
+}  
+        
+a[title="Software - Applications"]:before{
+        content: "Apps"!important;
+        color: #5E98E3;
+} 
+        
+img[alt="Software - Applications"]{
+        display: none!important;
+}  
+        
+a[title="Pictures - Graphics"]:before{
+        content: "Graphics"!important;
+        color: #E39DB8;
+} 
+        
+img[alt="Pictures - Graphics"]{
+        display: none!important;
+}  
+        
+a[title="Pictures - Photos"]:before{
+        content: "Photos"!important;
+        color: #E387C5;
+} 
+    
+img[alt="Picutres - Photos"]{
+        display: none!important;
+}
+
+table.torrent-list tbody .comments {        
+        padding-top: 0px;
+        padding-left: 2px;
+        padding-right: 2px;
+        padding-bottom: 1px;
+}
+        
+.fa-comments-o {
+        display: none;
+}
+}

@@ -1,0 +1,50 @@
+@-moz-document url-prefix("https://bato.to/reader") {
+body{
+    background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGBAMAAAAS4vJ7AAAAG1BMVEUAAAAbGxvd7h7d7h7d7h7d7h4bGxsbGxsbGxvf7wGmAAAAGklEQVQImWNIYGhnKGPgYGhPYGDgKGNggDIANMIEMGRbi90AAAAASUVORK5CYII=")!important;
+  }
+  
+  #mainContent{
+    background:none;
+  }
+  
+  #mainContent,
+  #content{
+    padding:0!important;
+  }
+  
+  #webtoon160ad {
+    width: 0px!important;
+  }
+  
+  #branding,
+  #user_bar,
+  #footer_utilities,
+  #stats_div,
+  #full_image > div:nth-child(1),
+  #zoom_notice,
+  #webtoon160ad,
+  .moderation_bar:nth-of-type(1) {
+    display:none;
+  }
+  
+  #ipbwrapper{
+    width:auto!important;
+    max-width:100%!important;
+  }
+  
+  #comic_wrap > div:nth-child(1){
+    position:static!important;
+    margin-bottom:0!important;
+  }
+  
+  #comic_wrap > div:nth-child(3){
+    width:0px!important;
+  }
+   
+  
+  #comic_page{
+    width:100%!important;
+    margin:7px 0 0!important;
+    border:none!important;
+  }
+}

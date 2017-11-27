@@ -1,0 +1,39 @@
+@-moz-document url-prefix("http://readms.net/r/") {
+@namespace url(http://www.w3.org/1999/xhtml);
+ body{
+    background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGBAMAAAAS4vJ7AAAAG1BMVEUAAAAbGxvd7h7d7h7d7h7d7h4bGxsbGxsbGxvf7wGmAAAAGklEQVQImWNIYGhnKGPgYGhPYGDgKGNggDIANMIEMGRbi90AAAAASUVORK5CYII=")!important;
+  }
+ 
+  #reader-sky,
+  #reader-nav,
+  .msa
+  {
+    display:none!important;
+  }
+ 
+  .subnav
+  {
+    top: 0px;
+    opacity: 0.45;
+  }
+ 
+  .page
+  {
+    margin-right: 0px;    
+    width:100%!important;
+  }
+ 
+  .pager,
+  .btn-reader-page .btn,
+  .btn-reader-chapter .btn
+  {
+    font-size: 12px;
+    line-height: 1;
+    opacity: 1;
+  }
+ 
+  #manga-page
+  {
+    width:100%!important;
+  }
+}

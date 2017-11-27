@@ -1,0 +1,54 @@
+@-moz-document url-prefix("https://bato.to/myfollows") {
+/*
+  #primary_nav,
+  #community_app_menu,
+  */
+  #user_bar,
+  #index_stats,
+  .maintitle,
+  .header,
+  #footer_utilities,
+  #themeToggle,
+  #nav_menu_2,
+  #nav_menu_3,
+  #nav_menu_5,
+  #nav_menu_7,
+  #nav_app_forums,
+  #nav_app_members,
+  #nav_app_subscriptions,
+  #exclusive_titles,
+  .category_block .clear,
+  /*stupid forum section*/
+  /*.clear.ipb_table:nth-child(2),*/
+  /*table.ipb_table:nth-of-type(2),*/
+  #anonymous_element_6,               
+  /* social media */
+  .topic_share,
+  /*.ipsPad,*/
+  /* edit description */
+  .post_controls,
+  /* Comments */
+  #commentsStart,
+  /* forum table */
+  .row0:nth-of-type(2) {
+    display:none;
+  }
+        
+  /* new topic */
+  /*.topic_buttons    */
+  #mainContent .clearfix .clear .ipb_table {
+    display:none;
+  }
+                 
+  .ipb_table.chapters_list {
+    display:table !important;    
+    width:100% !important;
+    border-collapse: collapse;
+  }
+
+  .clearfix,
+  .category_block {
+    width:auto!important;
+    margin-right:auto!important;
+  }
+}
