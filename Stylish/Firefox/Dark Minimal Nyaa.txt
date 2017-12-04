@@ -234,7 +234,16 @@ a[title="Pictures - Photos"]:before{
         color: #E387C5;
 } 
     
-img[alt="Picutres - Photos"]{
+img[alt="Pictures - Photos"]{
+        display: none!important;
+}
+
+a[title="Live Action - Idol/Promotional Video"]:before{
+        content: "Live Action Idol/PV"!important;
+        color: #E3DE93;
+} 
+    
+img[alt="Live Action - Idol/Promotional Video"]{
         display: none!important;
 }
 
