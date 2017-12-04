@@ -8,3 +8,6 @@ Welcome Back bot script for mIRC
 
 ## Stylish themes ##
 Customized Stylish themes for browsers
+* Nyaa.si
+* Batoto Follow/Reader
+* Mangastream Reader
