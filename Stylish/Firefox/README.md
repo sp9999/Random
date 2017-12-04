@@ -12,6 +12,10 @@ Used for nyaa.si dark theme.
 
 ![With and Without on portrait monitor](Images/MinimalNyaasi.png "With/Without")
 
+## Minimal Batoto ##
+Contains both portions of Minimal Batoto Follow and Minimal Batoto Reader found below in one stylish script.
+If you only want the reader portion in order to access forum and other social pages, consider only installing Reader.
+
 ## Minimal Batoto Follow ##
 * Removes account bar at top
 * Removes unnecessary tabs at the top (mostly social features)
