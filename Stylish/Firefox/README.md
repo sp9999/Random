@@ -9,7 +9,7 @@ Used for nyaa.si dark theme.
 * Replaces icons with text
 * More compact
 
-![Dark Minimal Nyaa in use on portrait monitor](Images/MinimalNyaasi_post.png "With")
+![With | Without on portrait monitor](Images/MinimalNyaasi.png "With/Without")
 
 ## Minimal Batoto Follow ##
 * Removes account bar at top
@@ -19,15 +19,23 @@ Used for nyaa.si dark theme.
 * Removes right-hand column search/RSS/language settings
 * Removes section title bars and tables
 
+![With | Without on portrait monitor](Images/MinimalBatotoFollow1.png "With/Without")
+
 ### Series page ###
 * Remove social links
 * Remove forum section
 * Removes section titles
 
+![With | Without on portrait monitor](Images/MinimalBatotoFollow2.png "With/Without")
+
 ## Minimal Batoto Reader ##
 Remove everything but the image and enlarge image to fit width of window
 Navigation remains at bottom of screen (useful for returning to series page or goto chapter)
 
+![With | Without on portrait monitor](Images/MinimalBatotoReader.png "With/Without")
+
 ## Minimal Mangastream Reader ##
 Remove everything but the image and enlarge image to fit width of window
 Navigation bar remains at top, but has transparency.
+
+![With | Without on portrait monitor](Images/MinimalMangastream.png "With/Without")
