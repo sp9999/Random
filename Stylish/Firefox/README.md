@@ -1,5 +1,6 @@
 # Stylish scripts for Firefox
 Most of these are made because I was tired of looking at dead space and useless information.
+You will need to download the stylish addon for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/stylish/) or [Chrome](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe?hl=en)
 * These can still work for Chrome, just have to import via Firefox style.
 * All of these are aimed for use on a portrait/vertical oriented monitor
 
@@ -9,7 +10,7 @@ Used for nyaa.si dark theme.
 * Replaces icons with text
 * More compact
 
-![With | Without on portrait monitor](Images/MinimalNyaasi.png "With/Without")
+![With and Without on portrait monitor](Images/MinimalNyaasi.png "With/Without")
 
 ## Minimal Batoto Follow ##
 * Removes account bar at top
@@ -29,13 +30,14 @@ Used for nyaa.si dark theme.
 ![With | Without on portrait monitor](Images/MinimalBatotoFollow2.png "With/Without")
 
 ## Minimal Batoto Reader ##
-Remove everything but the image and enlarge image to fit width of window
-Navigation remains at bottom of screen (useful for returning to series page or goto chapter)
+* Remove everything but the image and enlarge image to fit width of window
+* Navigation remains at bottom of screen (useful for returning to series page or goto chapter)
 
 ![With | Without on portrait monitor](Images/MinimalBatotoReader.png "With/Without")
 
 ## Minimal Mangastream Reader ##
-Remove everything but the image and enlarge image to fit width of window
-Navigation bar remains at top, but has transparency.
+* Remove everything but the image and enlarge image to fit width of window
+* Navigation bar remains at top, but has transparency
+Sadly can't get rid of the watermark
 
 ![With | Without on portrait monitor](Images/MinimalMangastream.png "With/Without")
