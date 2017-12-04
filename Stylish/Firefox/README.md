@@ -1,8 +1,9 @@
 # Stylish scripts for Firefox
 Most of these are made because I was tired of looking at dead space and useless information.
 You will need to download the stylish addon for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/stylish/) or [Chrome](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe?hl=en)
-* These can still work for Chrome, just have to import via Firefox style.
 * All of these are aimed for use on a portrait/vertical oriented monitor
+* These can still work for Chrome, just have to import via Firefox style.
+![Import](Images/ImportStyle.png "Import")
 
 ## Dark Minimal Nyaa ##
 Used for nyaa.si dark theme.
@@ -15,6 +16,7 @@ Used for nyaa.si dark theme.
 ## Minimal Batoto ##
 Contains both portions of Minimal Batoto Follow and Minimal Batoto Reader found below in one stylish script.
 If you only want the reader portion in order to access forum and other social pages, consider only installing Reader.
+[Download from userstyles.org](https://userstyles.org/styles/152367/minimal-batoto-portrait)
 
 ## Minimal Batoto Follow ##
 * Removes account bar at top
