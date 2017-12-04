@@ -8,7 +8,8 @@ Used for nyaa.si dark theme.
 * Remove banner
 * Replaces icons with text
 * More compact
-![Dark Minimal Nyaa ](/Stylish/Firefox/MinimalNyaasi.png)
+
+![Dark Minimal Nyaa in use on portrait monitor](Images/MinimalNyaasi_post.png "With")
 
 ## Minimal Batoto Follow ##
 * Removes account bar at top
