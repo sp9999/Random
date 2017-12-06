@@ -3,7 +3,27 @@
   #primary_nav,
   #community_app_menu,
   */
-  #user_bar,
+  
+  /* Blood style elements */
+  /* uncomment logo if you want to get rid of logo at top of page in blood style */
+  /*#logo,*/
+  #content > div:nth-child(3) > div > div.clear > table,
+  #user_navigation,
+  #secondary_navigation,
+
+  /* ipb style elements */
+  /* uncomment branding if you want to get rid of dead space at top of page in ipb style*/
+  /*#branding,*/
+  
+  #nav_explore,
+  #search,
+  #index_stats,
+
+  /* sylo style elements */  
+  #headertop,
+  #header_bar,
+  .moderation_bar
+
   #index_stats,
   .maintitle,
   .header,
@@ -55,7 +75,7 @@
 
 @-moz-document url-prefix("https://bato.to/reader"), url-prefix("http://bato.to/reader") {
 body{
-    background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGBAMAAAAS4vJ7AAAAG1BMVEUAAAAbGxvd7h7d7h7d7h7d7h4bGxsbGxsbGxvf7wGmAAAAGklEQVQImWNIYGhnKGPgYGhPYGDgKGNggDIANMIEMGRbi90AAAAASUVORK5CYII=")!important;
+    background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGBAMAAAAS4vJ7AAAAG1BMVEUAAAAbGxvd7h7d7h7d7h7d7h4bGxsbGxsbGxvf7wGmAAAAGklEQVQImWNIYGhnKGPgYGhPYGDgKGNggDIANMIEMGRbi90AAAAASUVORK5CYII=")!important;    
   }
   
   #mainContent{
@@ -71,6 +91,18 @@ body{
     width: 0px!important;
   }
   
+
+  /* Blood style elements */
+  #secondary_navigation,
+  .ipbfooter,
+
+  /* sylo style elements */  
+  #headertop,
+  #header_bar,
+  #primary_nav,
+  .breadcrumb,
+
+  br,
   #branding,
   #user_bar,
   #footer_utilities,
@@ -85,21 +117,24 @@ body{
   #ipbwrapper{
     width:auto!important;
     max-width:100%!important;
+    padding-top:0px;
   }
   
-  #comic_wrap > div:nth-child(1){
-    position:static!important;
-    margin-bottom:0!important;
-  }
-  
-  #comic_wrap > div:nth-child(3){
+  #comic_wrap > div:nth-child(3),
+  #comic_wrap > div:nth-child(3) > div{
     width:0px!important;
+    height:0px!important;
+    top:0px!important;
   }
    
-  
+  #comic_wrap > div:nth-child(1),
+  #content,
   #comic_page{
+    position:static!important;
+    margin-bottom:0!important;
+    margin-top:0!important;
     width:100%!important;
-    margin:7px 0 0!important;
+    margin:0 0 0!important;
     border:none!important;
   }
 }

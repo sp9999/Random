@@ -1,10 +1,28 @@
-@-moz-document url-prefix("https://bato.to/myfollows"), url-prefix("https://bato.to/comic/_/comics"), url-prefix("http://bato.to/myfollows"), url-prefix("http://bato.to/comic/_/comics") {
-
 /*
   #primary_nav,
   #community_app_menu,
   */
-  #user_bar,
+  
+  /* Blood style elements */
+  /* uncomment logo if you want to get rid of logo at top of page in blood style */
+  /*#logo,*/
+  #content > div:nth-child(3) > div > div.clear > table,
+  #user_navigation,
+  #secondary_navigation,
+
+  /* ipb style elements */
+  /* uncomment branding if you want to get rid of dead space at top of page in ipb style*/
+  /*#branding,*/
+  
+  #nav_explore,
+  #search,
+  #index_stats,
+
+  /* sylo style elements */  
+  #headertop,
+  #header_bar,
+  .moderation_bar
+
   #index_stats,
   .maintitle,
   .header,
@@ -52,4 +70,3 @@
     width:auto!important;
     margin-right:auto!important;
   }
-}
