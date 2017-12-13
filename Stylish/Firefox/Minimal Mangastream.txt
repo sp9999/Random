@@ -1,4 +1,4 @@
-@-moz-document url-prefix("http://readms.net/r/") {
+@-moz-document url-prefix("http://readms.net/r/"), url-prefix("https://readms.net/r/") {
 @namespace url(http://www.w3.org/1999/xhtml);
  body{
     background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGBAMAAAAS4vJ7AAAAG1BMVEUAAAAbGxvd7h7d7h7d7h7d7h4bGxsbGxsbGxvf7wGmAAAAGklEQVQImWNIYGhnKGPgYGhPYGDgKGNggDIANMIEMGRbi90AAAAASUVORK5CYII=")!important;
