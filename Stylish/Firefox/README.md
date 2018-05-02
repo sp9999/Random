@@ -13,6 +13,14 @@ Used for nyaa.si dark theme.
 
 ![With and Without on portrait monitor](Images/MinimalNyaasi.png "With/Without")
 
+## Minimal Mangastream Reader ##
+* Remove everything but the image and enlarge image to fit width of window
+* Navigation bar remains at top, but has transparency
+Sadly can't get rid of the watermark
+
+![With | Without on portrait monitor](Images/MinimalMangastream.png "With/Without")
+
+# Below is kill #
 ## Minimal Batoto ##
 Contains both portions of Minimal Batoto Follow and Minimal Batoto Reader found below in one stylish script.
 If you only want the reader portion in order to access forum and other social pages, consider only installing Reader.
@@ -40,10 +48,3 @@ If you only want the reader portion in order to access forum and other social pa
 * Navigation remains at bottom of screen (useful for returning to series page or goto chapter)
 
 ![With | Without on portrait monitor](Images/MinimalBatotoReader.png "With/Without")
-
-## Minimal Mangastream Reader ##
-* Remove everything but the image and enlarge image to fit width of window
-* Navigation bar remains at top, but has transparency
-Sadly can't get rid of the watermark
-
-![With | Without on portrait monitor](Images/MinimalMangastream.png "With/Without")
