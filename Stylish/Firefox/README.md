@@ -13,6 +13,13 @@ Used for nyaa.si dark theme.
 
 ![With and Without on portrait monitor](Images/MinimalNyaasi.png "With/Without")
 
+## Minimal Mangadex Reader ##
+* Remove everything but the image and enlarge image to fit width of window
+* Site navigation bar remains at top, made things smaller and got rid of some elements
+* Manga navigation at bottom, has transparency until hovered
+
+![With | Without on portrait monitor](Images/MinimalMangadexReader.png "With/Without")
+
 ## Minimal Mangastream Reader ##
 * Remove everything but the image and enlarge image to fit width of window
 * Navigation bar remains at top, but has transparency
