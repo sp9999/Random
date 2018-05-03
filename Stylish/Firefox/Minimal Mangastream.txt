@@ -14,7 +14,7 @@
   .subnav
   {
     top: 0px;
-    opacity: 0.45;
+    opacity: 0.1;
   }
 
   .subnav:hover {
