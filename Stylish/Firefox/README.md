@@ -1,6 +1,7 @@
 # Stylish scripts for Firefox
 Most of these are made because I was tired of looking at dead space and useless information.
-You will need to download the stylish addon for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/stylish/) or [Chrome](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe?hl=en)
+You will need to download the stylish addon for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/stylish/) or [Chrome](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe?hl=en). You can also find some of my scripts on [userstyles](https://userstyles.org/users/561887) if you want easier management of whenever I decide to update any. Instead of doing the manual method below:
+
 * All of these are aimed for use on a portrait/vertical oriented monitor
 * These can still work for Chrome, just have to import via Firefox style.
 ![Import](Images/ImportStyle.png "Import")
@@ -23,7 +24,7 @@ Used for nyaa.si dark theme.
 ## Minimal Mangastream Reader ##
 * Remove everything but the image and enlarge image to fit width of window
 * Navigation bar remains at top, but has transparency
-Sadly can't get rid of the watermark
+* Sadly can't get rid of the watermark
 
 ![With | Without on portrait monitor](Images/MinimalMangastream.png "With/Without")
 
