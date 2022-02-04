@@ -12,3 +12,8 @@ Customized Stylish themes for browsers
 * Mangadex Reader
 * Mangastream Reader
 * Batoto Follow/Reader - but is kill
+
+## Userscripts ##
+Scripts to be used for greasemonkey/tampermonkey/etc.
+* Wordle Dictionary - Script to show available words that are still valid given constraints as you guess.
+  * https://www.youtube.com/watch?v=-WVa1WRkXgo
