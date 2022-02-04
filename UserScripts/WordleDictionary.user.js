@@ -112,7 +112,6 @@ const generateHTML = () => {
         SettingsDiv.style.top = '50px';
         SettingsDiv.style.left = '10px';
         SettingsDiv.style.maxHeight = '60%';
-        SettingsDiv.style.overflow = "scroll";
         SettingsDiv.style.textAlign = 'center';
         SettingsDiv.style.padding = '10px';
 
@@ -125,7 +124,7 @@ const generateHTML = () => {
         DictionaryDiv.style.top = '110px';
         DictionaryDiv.style.left = '50px';
         DictionaryDiv.style.maxHeight = '60%';
-        DictionaryDiv.style.overflow = "scroll";
+        DictionaryDiv.style.overflow = "auto";
         DictionaryDiv.style.textAlign = 'center';
         DictionaryDiv.style.padding = '10px';
 
