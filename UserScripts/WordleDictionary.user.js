@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         Wordle dictionary
 // @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  Script to show available words that are still valid given constraints as you guess.
+// @version      1.0
+// @description  Script to show available words that are still valid given constraints as you guess. Video - https://www.youtube.com/watch?v=-WVa1WRkXgo
 // @author       SP
 // @match        https://www.powerlanguage.co.uk/wordle/
 // @icon         https://www.google.com/s2/favicons?domain=powerlanguage.co.uk
+// @created  	 2.3.2022
+// @lastUpdated  2.3.2022
 // @grant        none
 // ==/UserScript==
 
