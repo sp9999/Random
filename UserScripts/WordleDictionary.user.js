@@ -4,10 +4,10 @@
 // @version      1.0
 // @description  Script to show available words that are still valid given constraints as you guess. Video - https://www.youtube.com/watch?v=-WVa1WRkXgo
 // @author       SP
-// @match        https://www.powerlanguage.co.uk/wordle/
+// @match        https://www.nytimes.com/games/wordle/index.html
 // @icon         https://www.google.com/s2/favicons?domain=powerlanguage.co.uk
 // @created  	 2.3.2022
-// @lastUpdated  2.3.2022
+// @lastUpdated  2.13.2022
 // @grant        none
 // ==/UserScript==
 
