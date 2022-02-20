@@ -14,38 +14,38 @@ const ALL_WORDS = ["aahed", "aalii", "aargh", "aarti", "abaca", "abaci", "aback"
 // so far that I've encountered
 const ANSWER_WORDS = [
 	"abbey", "abbot", "about", "above", "actor", "adapt", "adobe", "aegis", "agile", "agree", "alder", "algae", "alike", "altar", "alter", "amiga", "amino", "angle", "arbor", "arena", 
-	"argue", "ariel", "arise", "arrow", "ashes", "aspen", "asset", "atlas", "avant", "aware", 
+	"argue", "ariel", "arise", "arrow", "ascot", "ashes", "aspen", "asset", "atlas", "avant", "aware", 
 	"badly", "banco", "banda", "barge", "based", "basil", "bayou", "bazar", "beach", "belle", "below", "berry", "berth", "bight", "billy", "birth", "blame", "blank", "blast", "blaze", 
-	"block", "bluff", "booth", "bound", "boxer", "bread", "break", "breed", "bride", "brief", "brier", "brink", "brown", "buddy", "buyer", "byway", 
-	"cache", "camel", "campo", "canoe", "canon", "carex", "cause", "cease", "chang", "chart", "chase", "chick", "chief", "chili", "chuck", "circa", "clerk", "cline", "clone", "coach", 
-	"colby", "colon", "color", "combo", "comic", "comte", "congo", "conte", "conus", "corps", "costa", "count", "coupe", "court", "crack", "crash", "cream", "creed", "crore", "crush", 
-	"crypt", "cubic", "curry", 
-	"daddy", "daisy", "dance", "debut", "depth", "derby", "devil", "diner", "disco", "doing", "donor", "draft", "drama", "dried", "drink", "drive", "drone", "drove", "ducal", "duchy", 
-	"dusty", 
-	"earth", "edged", "edict", "elbow", "elect", "elite", "emery", "enter", "envoy", "epoch", "erect", "erica", "ester", "excel", "exist", 
+	"blend", "bliss", "block", "bluff", "blunt", "booth", "bound", "boxer", "bread", "break", "breed", "bride", "brief", "brier", "brink", "brown", "buddy", "buyer", "byway", 
+	"cache", "camel", "campo", "canoe", "canon", "carex", "cause", "cease", "chang", "chart", "chase", "chick", "chief", "chili", "chuck", "circa", "cisco", "cited", "clash", "clerk", 
+	"cline", "clone", "coach", "colby", "colon", "color", "combo", "comic", "comte", "congo", "conte", "conus", "corps", "costa", "count", "coupe", "court", "crack", "crash", "cream", 
+	"creed", "crore", "crude", "crush", "crypt", "cubic", "curry", 
+	"daddy", "daisy", "dance", "debut", "depth", "derby", "devil", "diner", "disco", "doing", "donor", "dough", "draft", "drama", "dried", "drink", "drive", "drone", "drove", "ducal", 
+	"duchy", "dusty", 
+	"earth", "edged", "edict", "elbow", "elect", "elite", "emery", "enter", "envoy", "epoch", "erect", "erica", "essay", "ester", "excel", "exist", 
 	"faced", "fairy", "fatal", "fatty", "feast", "fence", "ferry", "fever", "fight", "final", "first", "fitch", "fjord", "flank", "flood", "flown", "flute", "force", "forge", "forth", 
-	"forum", "found", "foxes", "freed", "fresh", "fried", "fritz", "frost", "fungi", 
-	"gamma", "garth", "geese", "genie", "genoa", "genre", "glove", "gnome", "grade", "grape", "graph", "grave", "green", "groom", "gross", "group", "guard", "guide", "guild", "guilt", 
-	"gully", "gypsy", 
-	"habit", "hairy", "happy", "harsh", "hatch", "hazel", "heard", "hedge", "hilly", "honda", "honey", "honor", "hotel", "hound", "hydra", 
+	"forum", "found", "foxes", "freed", "fresh", "friar", "fried", "fritz", "frost", "fungi", 
+	"gamma", "garth", "geese", "genie", "genoa", "genre", "glory", "glove", "gnome", "grade", "grape", "graph", "grass", "grave", "green", "groom", "gross", "group", "guard", "guess", 
+	"guide", "guild", "guilt", "gully", "gypsy", 
+	"habit", "hairy", "happy", "harsh", "hatch", "hazel", "heard", "hedge", "hilly", "honda", "honey", "honor", "hotel", "hound", "humor", "hydra", 
 	"ideal", "index", "inlet", "input", "inter", "intro", "islet", "issue", 
 	"japan", "jihad", "jimmy", "judas", 
 	"kerry", 
 	"label", "lacey", "laird", "laser", "later", "laura", "learn", "linen", "liner", "lobby", "local", "lodge", "logic", "louie", "lucky", "lunch", "lupus", "lynch", "lyric", 
-	"macro", "mafia", "mango", "mania", "marsh", "mason", "meant", "mecca", "medal", "metal", "micro", "minor", "mixed", "molly", "mondo", "money", "monte", "moody", "moose", "moray", 
-	"motel", "motto", "moved", "mural", 
+	"macro", "mafia", "mango", "mania", "maria", "marsh", "mason", "meant", "mecca", "medal", "metal", "micro", "minor", "mixed", "mixer", "mixes", "molly", "mondo", "money", "monte", 
+	"moody", "moose", "moray", "motel", "motto", "moved", "mural", 
 	"naked", "named", "nancy", "nelly", "night", "ninja", "noise", "notch", 
-	"ocean", "offer", "older", "olive", "onion", "orbit", "other", "otter", "owing", "owned", "owner", "ozone", 
-	"padre", "paris", "pasha", "paste", "peach", "pedro", "petit", "piece", "pious", "piper", "pixel", "place", "plain", "plane", "plant", "plaza", "posse", "pound", "power", "prime", 
-	"prism", "promo", "prose", "prove", "proxy", "punch", "purge", 
+	"occur", "ocean", "offer", "older", "olive", "onion", "orbit", "other", "otter", "outer", "owing", "owned", "owner", "ozone", 
+	"padre", "paris", "pasha", "paste", "peach", "pedro", "perry", "petit", "petty", "piece", "pious", "piper", "pixel", "place", "plain", "plane", "plant", "plaza", "point", "posse", 
+	"pound", "power", "prime", "prism", "promo", "proof", "prose", "prove", "proxy", "punch", "purge", 
 	"queer", "quick", "quite", 
-	"rabbi", "raced", "radar", "radio", "rainy", "ready", "reply", "ridge", "rifle", "rioja", "rival", "roach", "robin", "rotor", "rough", "rowan", "rubus", 
+	"rabbi", "raced", "radar", "radio", "rainy", "rapid", "ready", "reply", "ridge", "rifle", "rioja", "rival", "roach", "robin", "rotor", "rough", "rowan", "rubus", 
 	"sahib", "sault", "savoy", "scene", "scout", "sedge", "seine", "serge", "serum", "seton", "seven", "sexes", "shade", "shaft", "shale", "shape", "sheer", "sheet", "shelf", "shine", 
-	"shirt", "shore", "short", "sigma", "sited", "sixty", "skull", "slave", "slice", "sloop", "slope", "smash", "smoky", "snack", "snail", "snake", "sonny", "sorry", "south", "space", 
-	"spark", "spear", "spend", "spent", "sperm", "spike", "spire", "sport", "squad", "squid", "stack", "staff", "stain", "stake", "steam", "stern", "stiff", "stoke", "stood", "store", 
-	"stout", "study", "stunt", "swami", "swamp", "sweep", "swift", "swing", "sword", "sworn", 
-	"table", "tally", "taluk", "tammy", "tango", "taste", "tenor", "tense", "terra", "theta", "thing", "those", "titan", "tonga", "tough", "tract", "trade", "train", "trait", "trans", 
-	"trash", "trend", "trump", "trunk", "trust", "tulip", "turbo", "twain", 
+	"shirt", "shore", "short", "sigma", "sited", "sixty", "skull", "slave", "slice", "sloop", "slope", "smash", "smoky", "snack", "snail", "snake", "snoop", "sonny", "sorry", "south", 
+	"space", "spark", "spear", "speed", "spend", "spent", "sperm", "spike", "spire", "sport", "squad", "squid", "stack", "staff", "stain", "stake", "steam", "stern", "stiff", "stint", 
+	"stoke", "stood", "store", "stout", "study", "stunt", "swami", "swamp", "sweep", "swift", "swing", "sword", "sworn", 
+	"table", "tally", "taluk", "tammy", "tango", "taste", "tempo", "tenor", "tense", "terra", "theta", "thing", "those", "throw", "tidal", "titan", "tonga", "tough", "tract", "trade", 
+	"train", "trait", "trans", "trash", "trend", "trump", "trunk", "trust", "tulip", "tumor", "turbo", "twain", 
 	"unite", "urban", "urged", 
 	"valid", "valor", "vapor", "vault", "venus", "verve", "vicar", "villa", "vinyl", "viper", "vista", "vocal", "vodka", "vogue", "vowel", 
 	"waist", "wally", "waltz", "waste", "weber", "weird", "white", "widow", "width", "windy", "witch", "woody", "worth", "wrist", "write", 
@@ -148,7 +148,7 @@ const updateListHandler = (checkPrevState = true) => {
 
 	PREV_ROWS_COMPLETE = currRowComplete;
 	
-	clearDictionaryListclearDictionaryList();
+	clearDictionaryList();
 
     if (PREV_ROWS_COMPLETE == 1) {
 	    CURR_WORD_POOL = ALL_WORDS;
@@ -208,6 +208,7 @@ const updateListHandler = (checkPrevState = true) => {
                         }
                     break;
                 case STATES.PRESENT:
+                		// TODO: There is some bug where PROOF didn't show up after guessing PROMO
                         rules[evalIndex] = rules[evalIndex].replace(guess[evalIndex], "")
                         mustContain.push(guess[evalIndex])
                     break;
