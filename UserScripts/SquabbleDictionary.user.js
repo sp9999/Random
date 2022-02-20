@@ -53,7 +53,7 @@ const ANSWER_WORDS = [
 	"zonal", 
 	]
 const STATES = {
-    // Not yet submitted = n4oe6o stead
+    // Not yet submitted = n4oe6o 
     UNKNOWN: "n4oe6o",
     ABSENT: "18037ny",
     PRESENT: "tim17a",
