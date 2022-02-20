@@ -17,9 +17,9 @@ const ANSWER_WORDS = [
 	"argue", "ariel", "arise", "arrow", "ascot", "ashes", "aspen", "asset", "atlas", "avant", "aware", 
 	"badly", "banco", "banda", "barge", "based", "basil", "bayou", "bazar", "beach", "belle", "below", "berry", "berth", "bight", "billy", "birth", "blame", "blank", "blast", "blaze", 
 	"blend", "bliss", "block", "bluff", "blunt", "booth", "bound", "boxer", "bread", "break", "breed", "bride", "brief", "brier", "brink", "brown", "buddy", "buyer", "byway", 
-	"cache", "camel", "campo", "canoe", "canon", "carex", "cause", "cease", "chang", "chart", "chase", "chick", "chief", "chili", "chuck", "circa", "cisco", "cited", "clash", "clerk", 
-	"cline", "clone", "coach", "colby", "colon", "color", "combo", "comic", "comte", "congo", "conte", "conus", "corps", "costa", "count", "coupe", "court", "crack", "crash", "cream", 
-	"creed", "crore", "crude", "crush", "crypt", "cubic", "curry", 
+	"cache", "camel", "campo", "canoe", "canon", "carex", "cargo", "cause", "cease", "chang", "chart", "chase", "chick", "chief", "chili", "chuck", "circa", "cisco", "cited", "clash", 
+	"clerk", "cline", "clone", "cloud", "coach", "colby", "colon", "color", "combo", "comic", "comte", "congo", "conte", "conus", "corps", "costa", "count", "coupe", "court", "crack", 
+	"crash", "cream", "creed", "crore", "cross", "crude", "crush", "crypt", "cubic", "curry", 
 	"daddy", "daisy", "dance", "debut", "depth", "derby", "devil", "diner", "disco", "doing", "donor", "dough", "draft", "drama", "dried", "drink", "drive", "drone", "drove", "ducal", 
 	"duchy", "dusty", 
 	"earth", "edged", "edict", "elbow", "elect", "elite", "emery", "enter", "envoy", "epoch", "erect", "erica", "essay", "ester", "excel", "exist", 
@@ -32,18 +32,18 @@ const ANSWER_WORDS = [
 	"japan", "jihad", "jimmy", "judas", 
 	"kerry", 
 	"label", "lacey", "laird", "laser", "later", "laura", "learn", "linen", "liner", "lobby", "local", "lodge", "logic", "louie", "lucky", "lunch", "lupus", "lynch", "lyric", 
-	"macro", "mafia", "mango", "mania", "maria", "marsh", "mason", "meant", "mecca", "medal", "metal", "micro", "minor", "mixed", "mixer", "mixes", "molly", "mondo", "money", "monte", 
-	"moody", "moose", "moray", "motel", "motto", "moved", "mural", 
-	"naked", "named", "nancy", "nelly", "night", "ninja", "noise", "notch", 
-	"occur", "ocean", "offer", "older", "olive", "onion", "orbit", "other", "otter", "outer", "owing", "owned", "owner", "ozone", 
+	"macro", "mafia", "mango", "mania", "maria", "marsh", "mason", "mayan", "meant", "mecca", "medal", "metal", "micro", "minor", "mixed", "mixer", "mixes", "molly", "mondo", "money", 
+	"monte", "moody", "moose", "moray", "motel", "motto", "moved", "mural", 
+	"naked", "named", "nancy", "naval", "nelly", "night", "ninja", "noise", "notch", 
+	"occur", "ocean", "offer", "older", "olive", "onion", "opera", "orbit", "other", "otter", "outer", "owing", "owned", "owner", "ozone", 
 	"padre", "paris", "pasha", "paste", "peach", "pedro", "perry", "petit", "petty", "piece", "pious", "piper", "pixel", "place", "plain", "plane", "plant", "plaza", "point", "posse", 
-	"pound", "power", "prime", "prism", "promo", "proof", "prose", "prove", "proxy", "punch", "purge", 
-	"queer", "quick", "quite", 
-	"rabbi", "raced", "radar", "radio", "rainy", "rapid", "ready", "reply", "ridge", "rifle", "rioja", "rival", "roach", "robin", "rotor", "rough", "rowan", "rubus", 
-	"sahib", "sault", "savoy", "scene", "scout", "sedge", "seine", "serge", "serum", "seton", "seven", "sexes", "shade", "shaft", "shale", "shape", "sheer", "sheet", "shelf", "shine", 
-	"shirt", "shore", "short", "sigma", "sited", "sixty", "skull", "slave", "slice", "sloop", "slope", "smash", "smoky", "snack", "snail", "snake", "snoop", "sonny", "sorry", "south", 
-	"space", "spark", "spear", "speed", "spend", "spent", "sperm", "spike", "spire", "sport", "squad", "squid", "stack", "staff", "stain", "stake", "steam", "stern", "stiff", "stint", 
-	"stoke", "stood", "store", "stout", "study", "stunt", "swami", "swamp", "sweep", "swift", "swing", "sword", "sworn", 
+	"pound", "power", "pride", "prime", "prism", "promo", "proof", "prose", "prove", "proxy", "punch", "purge", 
+	"queer", "quick", "quite", "quota", 
+	"rabbi", "raced", "radar", "radio", "rainy", "rapid", "ready", "reply", "ridge", "rifle", "rioja", "rival", "roach", "robin", "robot", "rotor", "rough", "rowan", "rubus", 
+	"sahib", "sault", "savoy", "scene", "scout", "sedge", "seine", "serge", "serum", "seton", "seven", "sexes", "shade", "shaft", "shale", "shape", "sheen", "sheer", "sheet", "shelf", 
+	"shine", "shirt", "shore", "short", "sigma", "sited", "sixty", "skull", "slave", "slice", "sloop", "slope", "smash", "smoky", "snack", "snail", "snake", "snoop", "solid", "sonny", 
+	"sorry", "south", "space", "spark", "spear", "speed", "spend", "spent", "sperm", "spike", "spire", "sport", "squad", "squid", "stack", "staff", "stain", "stake", "steam", "stern", 
+	"stiff", "stint", "stoke", "stood", "store", "stout", "study", "stunt", "swami", "swamp", "sweep", "swift", "swing", "sword", "sworn", 
 	"table", "tally", "taluk", "tammy", "tango", "taste", "tempo", "tenor", "tense", "terra", "theta", "thing", "those", "throw", "tidal", "titan", "tonga", "tough", "tract", "trade", 
 	"train", "trait", "trans", "trash", "trend", "trump", "trunk", "trust", "tulip", "tumor", "turbo", "twain", 
 	"unite", "urban", "urged", 
@@ -64,7 +64,7 @@ const GUESS_LENGTH = 5;
 const ALPHA = "abcdefghijklmnopqrstuvwxyz";
 const NUM_GUESSES = 6;
 var PREV_ROWS_COMPLETE = 0;
-var CURR_WORD_POOL = [];
+var CURR_WORD_POOL = ALL_WORDS;
 
 function getRow(idx) {
     if (idx < 6 && idx >= 0) {
@@ -150,7 +150,7 @@ const updateListHandler = (checkPrevState = true) => {
 	
 	clearDictionaryList();
 
-    if (PREV_ROWS_COMPLETE == 1) {
+    if (PREV_ROWS_COMPLETE == 1 || checkPrevState == false) {
 	    CURR_WORD_POOL = ALL_WORDS;
 	    if (document.getElementById('answerOnlyCheckbox').checked) {
 	        CURR_WORD_POOL = ANSWER_WORDS;
@@ -208,7 +208,6 @@ const updateListHandler = (checkPrevState = true) => {
                         }
                     break;
                 case STATES.PRESENT:
-                		// TODO: There is some bug where PROOF didn't show up after guessing PROMO
                         rules[evalIndex] = rules[evalIndex].replace(guess[evalIndex], "")
                         mustContain.push(guess[evalIndex])
                     break;
