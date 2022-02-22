@@ -17,8 +17,8 @@ const ANSWER_WORDS = [
 	"amiga", "amino", "angle", "anime", "arbor", "arena", "argue", "ariel", "arise", "armed", "arose", "arrow", "arson", "ascot", "ashes", "aspen", "asset", "aster", "atlas", "attic", 
 	"avant", "aware", 
 	"bacon", "badly", "banco", "banda", "bandy", "barge", "baron", "based", "basil", "bayou", "bazar", "beach", "beech", "being", "belle", "below", "benny", "berry", "berth", "bight", 
-	"billy", "birth", "blame", "blank", "blast", "blaze", "blend", "blind", "bliss", "block", "blood", "blown", "bluff", "blunt", "booth", "bound", "boxer", "brand", "bread", "break", 
-	"breed", "bride", "brief", "brier", "brink", "brown", "buddy", "bursa", "buyer", "byway", 
+	"billy", "birth", "bitch", "black", "blame", "blank", "blast", "blaze", "blend", "blind", "bliss", "block", "blood", "blown", "bluff", "blunt", "booth", "bound", "boxer", "brand", 
+	"bread", "break", "breed", "bride", "brief", "brier", "brink", "brown", "buddy", "bursa", "buyer", "byway", 
 	"cabin", "cache", "cadet", "camel", "campo", "canoe", "canon", "carex", "carry", "catch", "cause", "cease", "cedar", "cello", "chair", "chang", "charm", "chart", "chase", "chest", 
 	"chick", "chief", "chili", "chose", "chuck", "cider", "circa", "cisco", "cited", "civic", "clade", "clash", "clerk", "cline", "clone", "close", "coach", "coded", "colby", "colon", 
 	"color", "combo", "comic", "comte", "congo", "conte", "conus", "corps", "costa", "could", "count", "coupe", "court", "crack", "craft", "crash", "cream", "creed", "creek", "crest", 
@@ -52,13 +52,13 @@ const ANSWER_WORDS = [
 	"safer", "sahib", "sault", "savoy", "scene", "scent", "scout", "screw", "scuba", "sedge", "seine", "sense", "serge", "serum", "seton", "seven", "sewer", "sexes", "shade", "shaft", 
 	"shale", "shape", "shawn", "shear", "sheep", "sheer", "sheet", "shelf", "shine", "shire", "shirt", "shore", "short", "shrub", "sided", "sight", "sigma", "silva", "sited", "sixty", 
 	"skull", "slash", "slate", "slave", "sleep", "slice", "sloop", "slope", "smart", "smash", "smoky", "snack", "snail", "snake", "snoop", "snout", "snowy", "solid", "solve", "sonny", 
-	"sorry", "sound", "south", "space", "spark", "spear", "speed", "spend", "spent", "sperm", "spice", "spike", "spiny", "spire", "split", "spoon", "sport", "squad", "squid", "stack", 
-	"staff", "stage", "stain", "stake", "stare", "start", "steam", "stern", "stick", "stiff", "stint", "stoke", "stone", "stood", "store", "story", "stout", "study", "stunt", "sugar", 
-	"surge", "swami", "swamp", "sweep", "swift", "swing", "sword", "sworn", "syrup", 
+	"sorry", "sound", "south", "space", "spark", "spear", "speed", "spelt", "spend", "spent", "sperm", "spice", "spike", "spiny", "spire", "split", "spoon", "sport", "squad", "squid", 
+	"stack", "staff", "stage", "stain", "stake", "stare", "start", "steam", "stern", "stick", "stiff", "stint", "stoke", "stone", "stood", "store", "story", "stout", "study", "stunt", 
+	"sugar", "surge", "swami", "swamp", "sweep", "swift", "swing", "sword", "sworn", "syrup", 
 	"table", "tally", "taluk", "tammy", "tango", "taste", "teach", "teddy", "tempo", "tenor", "tense", "terra", "thane", "thank", "theta", "thief", "thing", "those", "throw", "tidal", 
 	"titan", "tonga", "touch", "tough", "tract", "trade", "train", "trait", "trans", "trash", "trend", "tries", "trout", "trump", "trunk", "truss", "trust", "tulip", "tumor", "turbo", 
 	"twain", "tweed", "twice", "twist", "tying", 
-	"uncle", "unite", "urban", "urged", 
+	"uncle", "unite", "upper", "urban", "urged", 
 	"valid", "valor", "valve", "vapor", "vault", "venus", "verse", "verve", "vicar", "video", "villa", "vinyl", "viola", "viper", "visit", "vista", "vital", "vocal", "vodka", "vogue", 
 	"voter", "vowel", 
 	"waist", "wally", "waltz", "waste", "weber", "weigh", "weird", "welch", "while", "white", "whole", "widow", "width", "windy", "witch", "woody", "worth", "wrist", "write", 
@@ -283,7 +283,7 @@ const generateHTML = () => {
         SettingsDiv.style.color = 'white';
         SettingsDiv.style.position = 'absolute';
         SettingsDiv.style.top = '50px';
-        SettingsDiv.style.left = '10px';
+        SettingsDiv.style.left = '30px';
         SettingsDiv.style.maxHeight = '60%';
         SettingsDiv.style.textAlign = 'center';
         SettingsDiv.style.padding = '10px';
@@ -295,12 +295,13 @@ const generateHTML = () => {
         DictionaryDiv.style.border = '1px solid white';
         DictionaryDiv.style.position = 'absolute';
         DictionaryDiv.style.top = '140px';
-        DictionaryDiv.style.left = '75px';
+        DictionaryDiv.style.left = '35px';
+        DictionaryDiv.style.width = '200px';
         DictionaryDiv.style.maxHeight = '60%';
         DictionaryDiv.style.overflow = "auto";
         DictionaryDiv.style.textAlign = 'center';
         DictionaryDiv.style.padding = '10px';
-        DictionaryDiv.style.opacity = '0.7';
+        DictionaryDiv.style.opacity = '0.7';        
 
   const UpdateBtn = document.createElement('button');
         UpdateBtn.appendChild(document.createTextNode('Update'));
